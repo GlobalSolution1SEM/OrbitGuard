@@ -93,23 +93,23 @@
       </div>
 
       <div class="linhas-problema">
-        <article>
+        <div>
           <span>Risco</span>
           <h3>Um alerta isolado não explica a urgência.</h3>
           <span class="texto-linha">O operador precisa saber o que ameaça a missão e quanto tempo ainda existe para agir.</span>
-        </article>
+        </div>
 
-        <article>
+        <div>
           <span>Tempo</span>
           <h3>A janela de comunicação pode durar segundos.</h3>
           <span class="texto-linha">Enquanto dados são cruzados manualmente, a chance de enviar um comando seguro pode desaparecer.</span>
-        </article>
+        </div>
 
-        <article>
+        <div>
           <span>Custo</span>
           <h3>Manobrar protege, mas também consome missão.</h3>
           <span class="texto-linha">Cada desvio pode reduzir combustível, vida útil e continuidade dos serviços dependentes do satélite.</span>
-        </article>
+        </div>
       </div>
 
       <div class="chamada-produto">
@@ -140,50 +140,50 @@
         </figure>
 
         <div class="passos-tecnologia">
-          <article>
+          <div>
             <span>01</span>
             <strong>Dados orbitais</strong>
             <small>Entradas de posição, trajetória e proximidade.</small>
-          </article>
+          </div>
 
-          <article>
+          <div>
             <span>02</span>
             <strong>Janela de risco</strong>
             <small>Tempo útil para avaliar impacto e resposta.</small>
-          </article>
+          </div>
 
-          <article>
+          <div>
             <span>03</span>
             <strong>Recomendação</strong>
             <small>Ação sugerida com justificativa operacional.</small>
-          </article>
+          </div>
         </div>
       </div>
 
       <div class="lista-tecnologias">
-        <article>
+        <div>
           <span>Front-end</span>
           <strong>HTML5, CSS3 e JavaScript</strong>
           <small>Estrutura, identidade visual e interações do console.</small>
-        </article>
+        </div>
 
-        <article>
+        <div>
           <span>Lógica</span>
           <strong>Python</strong>
           <small>Regras de risco, score explicável e simulações do MVP.</small>
-        </article>
+        </div>
 
-        <article>
+        <div>
           <span>Dados</span>
           <strong>Dados simulados</strong>
           <small>Telemetria, detritos, distância mínima e janela de contato.</small>
-        </article>
+        </div>
 
-        <article>
+        <div>
           <span>Hardware</span>
           <strong>Arduino simulado</strong>
           <small>Sinais de status para representar sensores e alertas.</small>
-        </article>
+        </div>
       </div>
     </section>
     <section class="objetivos" id="objetivos" aria-labelledby="titulo-objetivos">
@@ -198,29 +198,49 @@
 
       <div class="carrossel-objetivos" data-carrossel>
         <div class="area-carrossel">
-          <article class="item-carrossel ativo" data-item>
-            <span>01</span>
-            <strong>Reduzir sobrecarga</strong>
-            <small>Mostrar apenas sinais que ajudam a decidir.</small>
-          </article>
+          <div class="item-carrossel ativo" data-item>
+            <figure class="imagem-carrossel">
+              <img src="assets/objetivo-sobrecarga.png" alt="Console orbital filtrando sinais de risco ao redor da Terra">
+            </figure>
+            <div class="texto-carrossel">
+              <span>01</span>
+              <strong>Reduzir sobrecarga</strong>
+              <small>Mostrar apenas sinais que ajudam a decidir.</small>
+            </div>
+          </div>
 
-          <article class="item-carrossel" data-item>
-            <span>02</span>
-            <strong>Explicar o risco</strong>
-            <small>Indicar objeto, urgência, confiança e motivo do alerta.</small>
-          </article>
+          <div class="item-carrossel" data-item>
+            <figure class="imagem-carrossel">
+              <img src="assets/objetivo-risco.png" alt="Satélite próximo a fragmentos orbitais com trajetória de risco">
+            </figure>
+            <div class="texto-carrossel">
+              <span>02</span>
+              <strong>Explicar o risco</strong>
+              <small>Indicar objeto, urgência, confiança e motivo do alerta.</small>
+            </div>
+          </div>
 
-          <article class="item-carrossel" data-item>
-            <span>03</span>
-            <strong>Comparar ações</strong>
-            <small>Apoiar escolhas entre monitorar, manobrar ou escalar.</small>
-          </article>
+          <div class="item-carrossel" data-item>
+            <figure class="imagem-carrossel">
+              <img src="assets/objetivo-acoes.png" alt="Satélite em órbita com trajetórias alternativas para decisão operacional">
+            </figure>
+            <div class="texto-carrossel">
+              <span>03</span>
+              <strong>Comparar ações</strong>
+              <small>Apoiar escolhas entre monitorar, manobrar ou escalar.</small>
+            </div>
+          </div>
 
-          <article class="item-carrossel" data-item>
-            <span>04</span>
-            <strong>Registrar decisão</strong>
-            <small>Guardar ação escolhida e justificativa do evento.</small>
-          </article>
+          <div class="item-carrossel" data-item>
+            <figure class="imagem-carrossel">
+              <img src="assets/objetivo-registro.png" alt="Registro visual de decisão orbital em console de missão">
+            </figure>
+            <div class="texto-carrossel">
+              <span>04</span>
+              <strong>Registrar decisão</strong>
+              <small>Guardar ação escolhida e justificativa do evento.</small>
+            </div>
+          </div>
         </div>
 
         <div class="controles-carrossel">
@@ -252,6 +272,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/carrossel.js"></script>
 </body>
-<script src="js/carrossel.js"></script>
 </html>
