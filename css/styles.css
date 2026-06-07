@@ -378,9 +378,14 @@ h1 span:last-child {
 .topo-secao h2 {
   margin-top: 16px;
   color: var(--prata);
-  font-size: clamp(3rem, 8vw, 7.2rem);
+  max-width: 860px;
+  font-size: clamp(2.6rem, 6vw, 5.8rem);
   font-weight: 900;
-  line-height: 0.94;
+  line-height: 1.02;
+}
+
+.topo-secao h2 span {
+  display: block;
 }
 
 .topo-secao p {
@@ -465,7 +470,7 @@ h1 span:last-child {
   border-top: 1px solid var(--linha);
 }
 
-.linhas-problema article {
+.linhas-problema > div {
   display: flex;
   align-items: flex-start;
   gap: 42px;
@@ -519,33 +524,38 @@ h1 span:last-child {
 
 .tecnologia-topo {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 42px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
 }
 
 .tecnologia-topo > div:first-child {
-  flex: 1 1 620px;
+  flex: none;
 }
 
 .tecnologia-topo h2 {
-  max-width: 780px;
+  max-width: 900px;
   margin-top: 16px;
   color: var(--prata);
-  font-size: clamp(2.7rem, 6.4vw, 6.3rem);
+  font-size: clamp(2.45rem, 5vw, 5rem);
   font-weight: 900;
-  line-height: 0.96;
+  line-height: 1;
+}
+
+.tecnologia-topo h2 span {
+  display: block;
 }
 
 .tecnologia-texto {
-  flex: 0 1 360px;
+  flex: none;
+  max-width: 780px;
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-bottom: 8px;
+  gap: 24px;
+  padding-bottom: 0;
 }
 
 .tecnologia-texto p {
+  flex: 1 1 0;
   color: var(--texto-fraco);
   font-size: 1rem;
 }
@@ -622,7 +632,7 @@ h1 span:last-child {
   border-top: 1px solid var(--linha);
 }
 
-.passos-tecnologia article {
+.passos-tecnologia > div {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
@@ -663,13 +673,13 @@ h1 span:last-child {
   border-bottom: 1px solid var(--linha);
 }
 
-.lista-tecnologias article {
+.lista-tecnologias > div {
   flex: 1 1 0;
   min-width: 0;
   padding: 24px 24px 26px 0;
 }
 
-.lista-tecnologias article + article {
+.lista-tecnologias > div + div {
   padding-left: 24px;
   border-left: 1px solid var(--linha-suave);
 }
@@ -709,33 +719,34 @@ h1 span:last-child {
 
 .objetivos-topo {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 42px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
 }
 
 .objetivos-topo > div:first-child {
-  flex: 1 1 620px;
+  flex: none;
 }
 
 .objetivos-topo h2 {
-  max-width: 760px;
+  max-width: 900px;
   margin-top: 16px;
   color: var(--prata);
-  font-size: clamp(2.8rem, 6.8vw, 6.6rem);
+  font-size: clamp(2.6rem, 5.8vw, 5.8rem);
   font-weight: 900;
-  line-height: 0.94;
+  line-height: 1;
 }
 
 .objetivos-texto {
-  flex: 0 1 370px;
+  flex: none;
+  max-width: 780px;
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-bottom: 8px;
+  gap: 24px;
+  padding-bottom: 0;
 }
 
 .objetivos-texto p {
+  flex: 1 1 0;
   color: var(--texto-fraco);
   font-size: 1rem;
 }
@@ -811,9 +822,13 @@ h1 span:last-child {
 
 .texto-carrossel {
   flex: 1 1 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .item-carrossel span {
+  display: block;
   color: var(--laranja-claro);
   font-size: 0.78rem;
   font-weight: 900;
@@ -821,6 +836,7 @@ h1 span:last-child {
 }
 
 .item-carrossel strong {
+  display: block;
   max-width: 650px;
   margin-top: 18px;
   color: var(--prata);
@@ -830,6 +846,7 @@ h1 span:last-child {
 }
 
 .item-carrossel small {
+  display: block;
   max-width: 460px;
   margin-top: 22px;
   color: var(--texto-fraco);
@@ -1074,7 +1091,7 @@ h1 span:last-child {
     border-top: 0;
   }
 
-  .passos-tecnologia article {
+  .passos-tecnologia > div {
     min-height: auto;
     padding: 24px 0;
     border-left: 0;
@@ -1084,16 +1101,16 @@ h1 span:last-child {
     flex-wrap: wrap;
   }
 
-  .lista-tecnologias article {
+  .lista-tecnologias > div {
     flex-basis: 50%;
     padding: 24px 22px 24px 0;
   }
 
-  .lista-tecnologias article + article {
+  .lista-tecnologias > div + div {
     padding-left: 22px;
   }
 
-  .lista-tecnologias article:nth-child(3) {
+  .lista-tecnologias > div:nth-child(3) {
     padding-left: 0;
     border-left: 0;
   }
@@ -1115,7 +1132,7 @@ h1 span:last-child {
     justify-self: end;
   }
 
-  .linhas-problema article {
+  .linhas-problema > div {
     flex-direction: column;
     gap: 12px;
   }
@@ -1150,6 +1167,12 @@ h1 span:last-child {
 
   .links-menu a {
     font-size: 0.66rem;
+  }
+
+  .tecnologia-texto,
+  .objetivos-texto {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .inicio {
@@ -1254,14 +1277,14 @@ h1 span:last-child {
     flex-direction: column;
   }
 
-  .lista-tecnologias article,
-  .lista-tecnologias article + article,
-  .lista-tecnologias article:nth-child(3) {
+  .lista-tecnologias > div,
+  .lista-tecnologias > div + div,
+  .lista-tecnologias > div:nth-child(3) {
     padding: 20px 0;
     border-left: 0;
   }
 
-  .lista-tecnologias article + article {
+  .lista-tecnologias > div + div {
     border-top: 1px solid var(--linha-suave);
   }
 
