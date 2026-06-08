@@ -23,7 +23,144 @@
 html {
   scroll-behavior: smooth;
 }
+.publico-alvo {
+  width: min(100% - 40px, var(--largura-maxima));
+  margin: 0 auto;
+  padding: 118px 0 132px;
+  scroll-margin-top: var(--altura-cabecalho);
+}
 
+.publico-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+.publico-intro {
+  flex: 0 1 44%;
+  min-width: 0;
+}
+
+.publico-intro h2 {
+  max-width: 680px;
+  margin-top: 16px;
+  color: var(--prata);
+  font-size: clamp(2.45rem, 5vw, 5.2rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.publico-intro h2 span {
+  display: block;
+}
+
+.publico-intro p {
+  max-width: 520px;
+  margin-top: 22px;
+  color: var(--texto-fraco);
+  font-size: 1rem;
+}
+
+.imagem-publico {
+  position: relative;
+  flex: 1 1 56%;
+  overflow: hidden;
+  border-top: 1px solid var(--linha);
+  border-bottom: 1px solid var(--linha);
+  background: var(--grafite);
+  animation: flutuarImagemPublico 8s ease-in-out infinite alternate;
+}
+
+.imagem-publico::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.34)),
+    linear-gradient(180deg, transparent 52%, rgba(0, 0, 0, 0.82) 100%);
+  pointer-events: none;
+}
+
+.imagem-publico img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  filter: saturate(0.78) contrast(1.08) brightness(0.78);
+}
+
+.imagem-publico figcaption {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  left: 28px;
+  z-index: 3;
+}
+
+.imagem-publico figcaption span,
+.dores-operador span {
+  display: block;
+  color: var(--laranja-claro);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.imagem-publico figcaption strong {
+  display: block;
+  max-width: 520px;
+  margin-top: 10px;
+  color: var(--prata);
+  font-size: clamp(1.08rem, 2vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+.dores-operador {
+  margin-top: 52px;
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid var(--linha);
+  border-bottom: 1px solid var(--linha);
+}
+
+.dores-operador > div {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 34px 24px;
+}
+
+.dores-operador > div + div {
+  border-left: 1px solid var(--linha-suave);
+}
+
+.dores-operador strong {
+  display: block;
+  margin-top: 16px;
+  color: var(--prata);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-weight: 850;
+  line-height: 1.08;
+}
+
+.dores-operador small {
+  display: block;
+  margin-top: 12px;
+  color: var(--texto-fraco);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+@keyframes flutuarImagemPublico {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-6px);
+  }
+}
 body {
   min-height: 100vh;
   overflow-x: hidden;
@@ -1071,7 +1208,8 @@ h1 span:last-child {
 
   .tecnologia-topo,
   .painel-tecnologia,
-  .objetivos-topo {
+  .objetivos-topo,
+  .publico-layout {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -1150,6 +1288,22 @@ h1 span:last-child {
   .equipe-rodape {
     justify-content: flex-start;
   }
+
+  .dores-operador {
+    flex-wrap: wrap;
+  }
+
+  .imagem-publico {
+    width: 100%;
+  }
+
+  .dores-operador {
+    width: 100%;
+  }
+
+  .dores-operador > div {
+    flex-basis: 33.333%;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1157,6 +1311,7 @@ h1 span:last-child {
   .problema,
   .tecnologia,
   .objetivos,
+  .publico-alvo,
   .rodape-conteudo {
     width: min(100% - 28px, var(--largura-maxima));
   }
@@ -1227,6 +1382,10 @@ h1 span:last-child {
     padding: 76px 0 88px;
   }
 
+  .publico-alvo {
+    padding: 76px 0 88px;
+  }
+
   .painel-tecnologia {
     margin-top: 42px;
   }
@@ -1285,6 +1444,38 @@ h1 span:last-child {
   }
 
   .lista-tecnologias > div + div {
+    border-top: 1px solid var(--linha-suave);
+  }
+
+  .imagem-publico {
+    animation: none;
+  }
+
+  .imagem-publico img {
+    min-height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .imagem-publico figcaption {
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .dores-operador {
+    margin-top: 42px;
+  }
+
+  .dores-operador {
+    flex-direction: column;
+  }
+
+  .dores-operador > div {
+    padding: 20px 0;
+    border-left: 0;
+  }
+
+  .dores-operador > div + div {
     border-top: 1px solid var(--linha-suave);
   }
 
