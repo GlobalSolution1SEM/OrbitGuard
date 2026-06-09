@@ -2994,26 +2994,118 @@ h1 span:last-child {
 }
 
 .menu {
-  width: min(100% - 64px, var(--largura-maxima));
-  min-height: var(--altura-cabecalho);
-  gap: 34px;
+  width: min(100% - 120px, var(--largura-maxima));
+  min-height: 96px;
+  gap: 42px;
 }
 
 .marca {
-  padding: 8px 0;
+  padding: 12px 0;
 }
 
 .links-menu {
-  gap: 24px;
+  gap: 30px;
 }
 
 .troca-tema {
-  padding: 7px;
+  position: relative;
+  min-width: 132px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 38px 8px 16px;
+  border: 1px solid rgba(242, 240, 236, 0.16);
+  background:
+    linear-gradient(135deg, rgba(242, 240, 236, 0.08), transparent 42%),
+    rgba(0, 0, 0, 0.34);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+  transition: border-color 180ms ease, background-color 180ms ease;
 }
 
-.botao-tema {
+.troca-tema::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--laranja-claro);
+  border-bottom: 2px solid var(--laranja-claro);
+  pointer-events: none;
+  transform: translateY(-68%) rotate(45deg);
+  transition: transform 180ms ease;
+}
+
+.troca-tema.aberto::after {
+  transform: translateY(-30%) rotate(225deg);
+}
+
+.troca-tema:hover,
+.troca-tema:focus-within {
+  border-color: var(--borda-tema-ativa);
+  background:
+    linear-gradient(135deg, rgba(242, 240, 236, 0.1), transparent 42%),
+    rgba(0, 0, 0, 0.48);
+}
+
+.botao-dropdown-tema {
+  width: 100%;
   min-height: 34px;
-  padding: 0 12px;
+  border: 0;
+  color: var(--prata);
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.lista-temas {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  left: 0;
+  z-index: 30;
+  display: none;
+  padding: 6px;
+  border: 1px solid var(--borda-tema-ativa);
+  background:
+    linear-gradient(135deg, rgba(242, 240, 236, 0.08), transparent 45%),
+    rgba(3, 3, 3, 0.96);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.46);
+}
+
+.troca-tema.aberto .lista-temas {
+  display: block;
+}
+
+.opcao-tema {
+  width: 100%;
+  min-height: 36px;
+  border: 0;
+  color: var(--prata);
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.opcao-tema:hover,
+.opcao-tema:focus-visible,
+.opcao-tema.ativo {
+  color: var(--prata);
+  background: rgba(242, 240, 236, 0.08);
+  outline: none;
 }
 
 @media (max-width: 900px) {
@@ -3023,10 +3115,10 @@ h1 span:last-child {
   }
 
   .menu {
-    width: min(100% - 36px, var(--largura-maxima));
-    min-height: 76px;
-    padding: 16px 0;
-    gap: 14px;
+    width: min(100% - 52px, var(--largura-maxima));
+    min-height: 88px;
+    padding: 20px 0;
+    gap: 16px;
   }
 
   .botao-menu {
@@ -3035,27 +3127,35 @@ h1 span:last-child {
   }
 
   .troca-tema {
-    margin-top: 16px;
-    padding: 12px;
+    grid-column: 1 / -1;
+    display: none;
+    width: 100%;
+    min-width: 0;
+    margin-top: 18px;
+    padding: 12px 42px 12px 16px;
+  }
+
+  .controle-menu:checked ~ .troca-tema {
+    display: flex;
   }
 
   .links-menu {
-    margin-top: 14px;
+    margin-top: 16px;
   }
 
   .links-menu a {
-    padding: 15px 2px;
+    padding: 16px 2px;
   }
 
   .controle-menu:checked ~ .links-menu {
-    max-height: 470px;
-    padding-top: 14px;
+    max-height: 500px;
+    padding-top: 16px;
   }
 }
 
 @media (max-width: 460px) {
   .menu {
-    width: min(100% - 28px, var(--largura-maxima));
+    width: min(100% - 32px, var(--largura-maxima));
   }
 
   .nome-marca {
@@ -3063,7 +3163,11 @@ h1 span:last-child {
   }
 
   .troca-tema {
-    padding: 10px;
+    padding: 11px 40px 11px 12px;
+  }
+
+  .lista-temas {
+    top: calc(100% + 6px);
   }
 }
 
