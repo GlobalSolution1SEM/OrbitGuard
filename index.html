@@ -26,11 +26,14 @@
       </label>
 
       <div class="troca-tema">
-        <span>Tema</span>
-        <div class="opcoes-tema">
-          <button class="botao-tema ativo" id="btnOrbital" type="button">Orbital</button>
-          <button class="botao-tema" id="btnEclipse" type="button">Eclipse</button>
-          <button class="botao-tema" id="btnLunar" type="button">Lunar</button>
+        <button class="botao-dropdown-tema" id="botaoTema" type="button">
+          <span id="textoTema">Orbital</span>
+        </button>
+
+        <div class="lista-temas" id="listaTemas">
+          <button class="opcao-tema ativo" type="button" data-tema="orbital">Orbital</button>
+          <button class="opcao-tema" type="button" data-tema="eclipse">Eclipse</button>
+          <button class="opcao-tema" type="button" data-tema="lunar">Lunar</button>
         </div>
       </div>
 
