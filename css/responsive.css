@@ -252,6 +252,11 @@
     flex-direction: column;
   }
 
+  .chamada-quiz {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .saida-console span,
   .saida-console strong,
   .saida-console small {
@@ -544,6 +549,10 @@
   .saida-console {
     padding: 24px 20px;
     gap: 14px;
+  }
+
+  .chamada-quiz {
+    padding: 24px 20px;
   }
 
   .imagens-problema {
