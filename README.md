@@ -4,7 +4,7 @@ OrbitGuard e uma landing page interativa sobre apoio a decisao orbital em cenari
 
 A proposta apresenta um console conceitual para ajudar operadores a interpretar alertas, avaliar janelas de contato e justificar decisoes diante de possiveis colisoes orbitais.
 
-## O Que E O OrbitGuard
+## O Que É O OrbitGuard
 
 OrbitGuard e uma proposta de solucao digital voltada ao apoio de decisoes em operacoes orbitais.
 
