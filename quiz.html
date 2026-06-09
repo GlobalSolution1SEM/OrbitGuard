@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz OrbitGuard | Lixo espacial</title>
+  <meta name="description" content="Quiz dinamico do OrbitGuard sobre lixo espacial, risco orbital e tomada de decisao.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  <header class="cabecalho-quiz">
+    <a class="marca-quiz" href="index.html">
+      <span>OrbitGuard</span>
+      <small>Quiz orbital</small>
+    </a>
+
+    <a class="link-voltar" href="index.html">Voltar para landing</a>
+  </header>
+
+  <main class="pagina-quiz">
+    <section class="intro-quiz">
+      <span class="etiqueta-quiz">Desafio de decisao orbital</span>
+      <h1>Voce entende o risco por tras do lixo espacial?</h1>
+      <p>Responda 10 perguntas sobre detritos, velocidade, rastreamento e decisoes operacionais.</p>
+    </section>
+
+    <section class="caixa-quiz">
+      <div class="topo-caixa">
+        <div>
+          <span id="numeroPergunta">Pergunta 01</span>
+          <strong id="placarQuiz">Pontuacao: 0</strong>
+        </div>
+
+        <div class="barra-progresso">
+          <div id="progressoQuiz"></div>
+        </div>
+      </div>
+
+      <div class="conteudo-quiz" id="conteudoQuiz">
+        <h2 id="perguntaQuiz"></h2>
+        <div class="alternativas-quiz" id="alternativasQuiz"></div>
+
+        <div class="feedback-quiz" id="feedbackQuiz">
+          <strong id="tituloFeedback"></strong>
+          <p id="resumoResposta"></p>
+        </div>
+
+        <button class="botao-proxima" id="botaoProxima" type="button">Proxima pergunta</button>
+      </div>
+
+      <div class="resultado-final escondido" id="resultadoFinal">
+        <span>Resultado final</span>
+        <h2 id="tituloResultado"></h2>
+        <p id="textoResultado"></p>
+        <button class="botao-proxima" id="refazerQuiz" type="button">Refazer quiz</button>
+      </div>
+    </section>
+
+    <section class="fontes-quiz">
+      <span>Fontes usadas nas perguntas</span>
+      <p>Dados baseados em estatisticas da ESA e material educativo da NASA sobre detritos orbitais.</p>
+    </section>
+  </main>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>

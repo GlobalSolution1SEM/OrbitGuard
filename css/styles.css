@@ -1520,6 +1520,40 @@ h1 span:last-child {
   flex: 0 1 300px;
 }
 
+.chamada-quiz {
+  margin-top: 34px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border: 1px solid rgba(242, 240, 236, 0.12);
+  background:
+    linear-gradient(120deg, rgba(217, 105, 36, 0.14), transparent 42%),
+    rgba(0, 0, 0, 0.48);
+}
+
+.chamada-quiz h3 {
+  margin-top: 12px;
+  color: var(--prata);
+  font-size: clamp(1.8rem, 3vw, 3.4rem);
+  font-weight: 900;
+  line-height: 0.98;
+}
+
+.chamada-quiz small {
+  display: block;
+  max-width: 520px;
+  margin-top: 14px;
+  color: var(--texto-fraco);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.chamada-quiz .botao-secundario {
+  flex: 0 0 auto;
+}
+
 .contato {
   width: min(100% - 40px, var(--largura-maxima));
   margin: 0 auto;
