@@ -18,12 +18,21 @@
         <span class="linha-marca" aria-hidden="true"></span>
       </a>
 
-      <input class="controle-menu" type="checkbox" id="abrir-menu">
-      <label class="botao-menu" for="abrir-menu">
+      <input class="controle-menu" id="menuCelular" type="checkbox">
+      <label class="botao-menu" for="menuCelular">
         <span></span>
         <span></span>
         <span></span>
       </label>
+
+      <div class="troca-tema">
+        <span>Tema</span>
+        <div class="opcoes-tema">
+          <button class="botao-tema ativo" id="btnOrbital" type="button">Orbital</button>
+          <button class="botao-tema" id="btnEclipse" type="button">Eclipse</button>
+          <button class="botao-tema" id="btnLunar" type="button">Lunar</button>
+        </div>
+      </div>
 
       <ul class="links-menu">
         <li><a href="#problema">Problema</a></li>
@@ -479,5 +488,6 @@
     </div>
   </footer>
   <script src="js/carrossel.js"></script>
+  <script src="js/tema.js"></script>
 </body>
 </html>
