@@ -41,6 +41,7 @@
         <li><a href="#publico-alvo">Público-alvo</a></li>
         <li><a href="#beneficios">Benefícios</a></li>
         <li><a href="#aplicacao">Aplicação</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -473,6 +474,54 @@
         </div>
       </div>
     </section>
+
+    <section class="contato" id="contato">
+      <div class="contato-topo">
+        <span class="etiqueta-secao">Contato operacional</span>
+        <h2>Fale com a equipe OrbitGuard.</h2>
+        <p>Use este canal para dúvidas sobre a solução, simulações ou apresentação do projeto.</p>
+      </div>
+
+      <div class="contato-layout">
+        <div class="contato-info">
+          <span>Canal de contato</span>
+          <strong>Uma mensagem curta ajuda a entender o contexto da operação.</strong>
+          <small>O retorno pode considerar perfil, área de interesse e objetivo da conversa.</small>
+        </div>
+
+        <form class="formulario-contato" id="formularioContato">
+          <div class="grupo-campo">
+            <label for="nomeContato">Nome</label>
+            <input id="nomeContato" type="text" placeholder="Digite seu nome">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="emailContato">E-mail</label>
+            <input id="emailContato" type="email" placeholder="Digite seu e-mail">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="areaContato">Área de interesse</label>
+            <select id="areaContato">
+              <option value="">Selecione uma área</option>
+              <option value="operacao">Operação de satélite</option>
+              <option value="telecom">Telecomunicações</option>
+              <option value="defesa-civil">Defesa civil</option>
+              <option value="pesquisa">Pesquisa acadêmica</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo campo-mensagem">
+            <label for="mensagemContato">Mensagem</label>
+            <textarea id="mensagemContato" placeholder="Escreva sua mensagem"></textarea>
+          </div>
+
+          <button class="botao-enviar" type="submit">Enviar contato</button>
+          <p class="resultado-contato" id="resultadoContato"></p>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="rodape">
@@ -489,5 +538,6 @@
   </footer>
   <script src="js/carrossel.js"></script>
   <script src="js/tema.js"></script>
+  <script src="js/validacao.js"></script>
 </body>
 </html>
